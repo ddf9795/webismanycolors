@@ -7,5 +7,5 @@ export default defineConfig({
     root: './',
     reporters: ['default'],
   },
-  base: 'https://ddf9795.github.io/webismanycolors/',
+  base: './src',
 });
