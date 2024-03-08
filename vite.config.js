@@ -7,5 +7,5 @@ export default defineConfig({
     root: './',
     reporters: ['default'],
   },
-  base: './src',
+  base: '',
 });
