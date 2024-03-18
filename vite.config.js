@@ -4,7 +4,7 @@ export default defineConfig({
   root: './src',
   test: {
     exclude: ['**/e2e/**'],
-    root: './',
+    root: './dist/',
     reporters: ['default'],
   },
   base: '',
