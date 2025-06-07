@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 2</title>
+  </head>
+  <body>
+    <div class="huhh">
+      <img class="wuhh" src="./img/cat-jam.gif" />
+      <img class="wuhh" src="./img/cat-jam.gif" />
+      <img class="wuhh" src="./img/cat-jam.gif" />
+      <img class="wuhh" src="./img/cat-jam.gif" />
+    </div>
+    <div id="options-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <input
+          id="auto-toggle"
+          type="checkbox"
+          checked="true"
+          name="automode"
+          value="autoMode"
+        />
+        <label for="auto-toggle"
+          >Automatic Mode: Visualizer progresses automatically based on song
+          progress</label
+        >
+
+        <br /><br />
+
+        <div id="color-options">
+          <span id="color-header">Background Color</span>
+          <div id="color-toggles">
+            <input
+              id="black"
+              type="radio"
+              name="color"
+              value="black"
+              class="radio"
+              checked="true"
+            />
+            <label for="black">Black</label>
+
+            <input
+              id="red"
+              type="radio"
+              name="color"
+              value="red"
+              class="radio"
+            />
+            <label for="red">Red</label>
+
+            <input
+              id="yellow"
+              type="radio"
+              name="color"
+              value="yellow"
+              class="radio"
+            />
+            <label for="yellow">Yellow</label>
+
+            <input
+              id="green"
+              type="radio"
+              name="color"
+              value="green"
+              class="radio"
+            />
+            <label for="green">Green</label>
+
+            <input
+              id="cyan"
+              type="radio"
+              name="color"
+              value="cyan"
+              class="radio"
+            />
+            <label for="cyan">Cyan</label>
+
+            <input
+              id="blue"
+              type="radio"
+              name="color"
+              value="blue"
+              class="radio"
+            />
+            <label for="blue">Blue</label>
+          </div>
+        </div>
+
+        <br />
+
+        <div id="vis-options">
+          <span id="vis-header">Visualizer Setting</span>
+          <div id="vis-toggles">
+            <div id="color-toggles">
+              <input
+                id="normal"
+                type="radio"
+                name="vis"
+                value="normal"
+                class="radio"
+                checked="true"
+              />
+              <label for="normal">Normal</label>
+
+              <input
+                id="radial-in"
+                type="radio"
+                name="vis"
+                value="radial-in"
+                class="radio"
+              />
+              <label for="radial-in">Radial In</label>
+
+              <input
+                id="alt-1"
+                type="radio"
+                name="vis"
+                value="alt-1"
+                class="radio"
+              />
+              <label for="alt-1">Alternating Bars 1</label>
+
+              <input
+                id="alt-2"
+                type="radio"
+                name="vis"
+                value="alt-2"
+                class="radio"
+              />
+              <label for="alt-2">Alternating Bars 2</label>
+
+              <input
+                id="radial-out"
+                type="radio"
+                name="vis"
+                value="radial-out"
+                class="radio"
+              />
+              <label for="radial-out">Radial Out</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="credit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>
+          Created with love (and caffeine) by Dean "Leftie" Flint
+          <a href="https://leftie.dev/" target="_blank"
+            ><img src="./img/alchemist marker.gif"
+          /></a>
+        </h1>
+        <br />
+        <h2>
+          Music Credit:
+          <a href="https://www.youtube.com/watch?v=sqyHAbUaaSQ" target="_blank"
+            >Frums - theyaremanycolors</a
+          >
+        </h2>
+      </div>
+    </div>
+
+    <audio id="music" src="./mp3/Frums - theyaremanycolors.mp3"></audio>
+    <canvas id="animation">The main setpiece for the page</canvas>
+    <div id="doodads">
+      <section class="controls">
+        <div class="control">
+          <label>Seek</label>
+          <input
+            type="range"
+            id="main-seek-slider"
+            min="0"
+            max="0.5"
+            value="0"
+            step="0.01"
+          />
+        </div>
+        <div class="control">
+          <label>Volume</label>
+          <input
+            type="range"
+            id="main-volume-slider"
+            min="0"
+            max="0.5"
+            value="0.5"
+            step="0.01"
+          />
+        </div>
+        <div class="control">
+          <button
+            id="play-button"
+            data-playing="false"
+            role="switch"
+            aria-checked="false"
+          >
+            Play
+          </button>
+        </div>
+      </section>
+      <section class="options">
+        <button id="options-button">Options</button>
+        <button id="credits-button">Credits</button>
+        <p class="title">webismanycolors v1.0.0</p>
+      </section>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
